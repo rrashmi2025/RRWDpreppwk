@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EventHub – Event Management</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<a href="#mainContent" class="skip-link">Skip to main content</a>
+
+<header>
+  <h1>EventHub</h1>
+</header>
+
+<main id="mainContent">
+
+  <!-- SPLASH SCREEN -->
+  <section id="splash" class="page active" tabindex="-1" aria-hidden="false">
+    <h2>Welcome to EventHub</h2>
+    <p>Your simple event management system.</p>
+    <button onclick="goTo('login')">Get Started</button>
+  </section>
+
+  <!-- LOGIN -->
+  <section id="login" class="page" tabindex="-1" aria-hidden="true">
+    <h2>Login / Sign Up</h2>
+
+    <form onsubmit="goTo('dashboard'); return false;">
+      <label for="email">Email</label>
+      <input id="email" type="email" required>
+
+      <label for="password">Password</label>
+      <input id="password" type="password" required>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <button onclick="goTo('splash')">Back</button>
+  </section>
+
+  <!-- DASHBOARD -->
+  <section id="dashboard" class="page" tabindex="-1" aria-hidden="true">
+    <h2>Dashboard</h2>
+
+    <nav aria-label="Main navigation">
+      <button onclick="goTo('browse')">Browse Events</button>
+      <button onclick="goTo('createEvent')">Create Event</button>
+      <button onclick="goTo('profile')">Profile / Settings</button>
+      <button onclick="goTo('myEvents')">My Events / Tickets</button>
+      <button onclick="goTo('splash')">Logout</button>
+    </nav>
+  </section>
+
+  <!-- BROWSE EVENTS -->
+  <section id="browse" class="page" tabindex="-1" aria-hidden="true">
+    <h2>Browse Events</h2>
+
+    <article class="event-card">
+      <h3>Music Festival</h3>
+      <p>Saturday at 7 PM</p>
+      <button onclick="goTo('eventDetails')">View Details</button>
+    </article>
+
+    <button onclick="goTo('dashboard')">Back</button>
+  </section>
+
+  <!-- EVENT DETAILS -->
+  <section id="eventDetails" class="page" tabindex="-1" aria-hidden="true">
+    <h2>Event Details</h2>
+    <p><strong>Music Festival</strong> – Saturday at 7 PM</p>
+
+    <button onclick="goTo('myEvents')">Get Ticket</button>
+    <button onclick="goTo('browse')">Back</button>
+  </section>
+
+  <!-- CREATE EVENT -->
+  <section id="createEvent" class="page" tabindex="-1" aria-hidden="true">
+    <h2>Create Event</h2>
+
+    <form onsubmit="goTo('myEvents'); return false;">
+      <label for="eventName">Event Name</label>
+      <input id="eventName" type="text" required>
+
+      <label for="eventDate">Date & Time</label>
+      <input id="eventDate" type="text" required>
+
+      <button type="submit">Save Event</button>
+    </form>
+
+    <button onclick="goTo('dashboard')">Back</button>
+  </section>
+
+  <!-- PROFILE -->
+  <section id="profile" class="page" tabindex="-1" aria-hidden="true">
+    <h2>Profile / Settings</h2>
+    <p>Name: Bunny</p>
+
+    <button onclick="goTo('myEvents')">My Events</button>
+    <button onclick="goTo('dashboard')">Back</button>
+  </section>
+
+  <!-- MY EVENTS -->
+  <section id="myEvents" class="page" tabindex="-1" aria-hidden="true">
+    <h2>My Events / Tickets</h2>
+    <p>You have 1 ticket: Music Festival</p>
+
+    <button onclick="goTo('dashboard')">Back</button>
+  </section>
+
+</main>
+
+<div id="sr-announcer" aria-live="polite" class="visually-hidden"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
