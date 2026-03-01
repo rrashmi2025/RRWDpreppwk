@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EventHub – Event Management System</title>
+
+  <!-- SEO -->
+  <meta name="description" content="EventHub is an event management platform to create, browse, and manage events and tickets.">
+  <meta name="keywords" content="event management, event platform, create events, tickets, event dashboard">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="EventHub – Event Management System">
+  <meta property="og:description" content="Create, browse, and manage events with EventHub.">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<a href="#mainContent" class="skip-link">Skip to main content</a>
+
+<header role="banner">
+  <h1>EventHub – Event Management Platform</h1>
+  <p>Your simple and accessible event management system</p>
+</header>
+
+<main id="mainContent">
+
+  <!-- SPLASH SCREEN -->
+  <section id="splash" class="page active" tabindex="-1" aria-hidden="false">
+    <h2>Welcome to EventHub – Your Event Management Hub</h2>
+
+    <img src="images/event-management-banner.jpg"
+         alt="Crowd attending an event with stage lighting, representing event management"
+         width="400">
+
+    <p>Your all-in-one event management system to create, manage, and attend events easily.</p>
+
+    <ul>
+      <li>Create custom events</li>
+      <li>Browse upcoming events</li>
+      <li>Manage tickets</li>
+    </ul>
+
+    <button onclick="goTo('login')">Get Started</button>
+  </section>
+
+  <!-- LOGIN -->
+  <section id="login" class="page" tabindex="-1" aria-hidden="true">
+    <h2>Login or Sign Up</h2>
+
+    <form onsubmit="goTo('dashboard'); return false;" aria-label="Login form">
+
+      <label for="email">Email</label>
+      <input id="email" type="email" required aria-required="true" autocomplete="email">
+
+      <label for="password">Password</label>
+      <input id="password" type="password" required aria-required="true" autocomplete="current-password">
+
+      <button type="submit">Login</button>
+    </form>
+
+    <button onclick="goTo('splash')">Back</button>
+  </section>
+
+  <!-- DASHBOARD -->
+  <section id="dashboard" class="page" tabindex="-1" aria-hidden="true">
+    <h2>EventHub Dashboard</h2>
+
+    <nav aria-label="Dashboard navigation">
+      <ul class="nav-list">
+        <li><button onclick="goTo('browse')">Browse Events</button></li>
+        <li><button onclick="goTo('createEvent')">Create Event</button></li>
+        <li><button onclick="goTo('profile')">Profile & Settings</button></li>
+        <li><button onclick="goTo('myEvents')">My Events & Tickets</button></li>
+        <li><button onclick="goTo('splash')">Logout</button></li>
+      </ul>
+    </nav>
+  </section>
+
+  <!-- BROWSE EVENTS -->
+  <section id="browse" class="page" tabindex="-1" aria-hidden="true">
+    <h2>Browse Upcoming Events</h2>
+
+    <article class="event-card">
+      <h3>Music Festival</h3>
+      <img src="images/music-event-festival.jpg"
+           alt="Outdoor music festival crowd enjoying live performances"
+           width="300">
+      <p><strong>Date:</strong> Saturday at 7 PM</p>
+      <p><strong>Location:</strong> Downtown Park</p>
+      <button onclick="goTo('eventDetails')">View Details</button>
+    </article>
+
+    <article class="event-card">
+      <h3>Tech Conference</h3>
+      <img src="images/tech-conference-event.jpg"
+           alt="Attendees listening to speakers at a technology conference"
+           width="300">
+      <p><strong>Date:</strong> June 15 at 9 AM</p>
+      <p><strong>Location:</strong> City Convention Center</p>
+      <button onclick="goTo('eventDetails')">View Details</button>
+    </article>
+
+    <button onclick="goTo('dashboard')">Back</button>
+  </section>
+
+  <!-- EVENT DETAILS -->
+  <section id="eventDetails" class="page" tabindex="-1" aria-hidden="true">
+    <h2>Event Details – Music Festival</h2>
+
+    <table>
+      <tr>
+        <th>Date</th>
+        <td>Saturday</td>
+      </tr>
+      <tr>
+        <th>Time</th>
+        <td>7:00 PM</td>
+      </tr>
+      <tr>
+        <th>Location</th>
+        <td>Downtown Park</td>
+      </tr>
+      <tr>
+        <th>Price</th>
+        <td>$25</td>
+      </tr>
+    </table>
+
+    <p>Join us for a night of live performances and entertainment!</p>
+
+    <button onclick="goTo('myEvents')">Get Ticket</button>
+    <button onclick="goTo('browse')">Back</button>
+  </section>
+
+  <!-- CREATE EVENT -->
+  <section id="createEvent" class="page" tabindex="-1" aria-hidden="true">
+    <h2>Create a New Event</h2>
+
+    <form onsubmit="goTo('myEvents'); return false;">
+
+      <label for="eventName">Event Name</label>
+      <input id="eventName" type="text" required>
+
+      <label for="eventDate">Date & Time</label>
+      <input id="eventDate" type="datetime-local" required>
+
+      <label for="eventLocation">Location</label>
+      <input id="eventLocation" type="text" required>
+
+      <button type="submit">Save Event</button>
+    </form>
+
+    <button onclick="goTo('dashboard')">Back</button>
+  </section>
+
+  <!-- PROFILE -->
+  <section id="profile" class="page" tabindex="-1" aria-hidden="true">
+    <h2>Your Profile & Settings</h2>
+
+    <p><strong>Name:</strong> John Doe</p>
+    <p><strong>Email:</strong> johndoe@email.com</p>
+
+    <button onclick="goTo('myEvents')">My Events</button>
+    <button onclick="goTo('dashboard')">Back</button>
+  </section>
+
+  <!-- MY EVENTS -->
+  <section id="myEvents" class="page" tabindex="-1" aria-hidden="true">
+    <h2>My Events & Tickets</h2>
+
+    <ul>
+      <li>Music Festival – 1 Ticket</li>
+    </ul>
+
+    <button onclick="goTo('dashboard')">Back</button>
+  </section>
+
+  <!-- EXTERNAL RESOURCES -->
+  <section>
+    <h2>Helpful Event Resources</h2>
+    <ul>
+      <li><a href="https://www.eventbrite.com/" target="_blank" rel="noopener">Eventbrite</a></li>
+      <li><a href="https://www.meetup.com/" target="_blank" rel="noopener">Meetup</a></li>
+      <li><a href="https://www.ticketmaster.com/" target="_blank" rel="noopener">Ticketmaster</a></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 EventHub | All Rights Reserved</p>
+
+  <nav aria-label="Social media">
+    <ul class="social-links">
+      <li><a href="#"><img src="icons/facebook.svg" alt="Facebook"></a></li>
+      <li><a href="#"><img src="icons/twitter.svg" alt="Twitter"></a></li>
+      <li><a href="#"><img src="icons/instagram.svg" alt="Instagram"></a></li>
+    </ul>
+  </nav>
+</footer>
+
+<div id="sr-announcer" aria-live="polite" class="visually-hidden"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
