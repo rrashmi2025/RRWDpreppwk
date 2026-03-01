@@ -5,18 +5,12 @@
   <title>EventHub – Event Management System</title>
 
   <!-- SEO -->
-  <meta name="description" content="EventHub is an event management platform to create, browse, and manage events and tickets.">
-  <meta name="keywords" content="event management, event platform, create events, tickets, event dashboard">
+  <meta name="description" content="EventHub is a simple event management system to create, browse, and manage events and tickets.">
+  <meta name="keywords" content="event management, create events, tickets, dashboard, event system">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="EventHub – Event Management System">
-  <meta property="og:description" content="Create, browse, and manage events with EventHub.">
-  <meta property="og:type" content="website">
 
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 
 <body>
 
