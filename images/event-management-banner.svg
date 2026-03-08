@@ -1,0 +1,9 @@
+<svg width="900" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="300" fill="#4a6fa5"/>
+  <text x="50%" y="45%" fill="white" font-size="48" font-family="Arial" text-anchor="middle">
+    Event Management
+  </text>
+  <text x="50%" y="65%" fill="white" font-size="24" font-family="Arial" text-anchor="middle">
+    Create • Browse • Manage
+  </text>
+</svg>
