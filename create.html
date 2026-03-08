@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Event – EventHub</title>
+  <meta name="description" content="Create a new event on EventHub.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+  <img src="images/logo.png" alt="EventHub logo" class="logo">
+  <nav>
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="browse.html">Browse Events</a></li>
+      <li><a class="active" href="create.html">Create Event</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="tickets.html">My Tickets</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1>Create a New Event</h1>
+
+  <form id="eventForm">
+    <label for="eventName">Event Name</label>
+    <input id="eventName" type="text" required>
+
+    <label for="eventDate">Date & Time</label>
+    <input id="eventDate" type="datetime-local" required>
+
+    <label for="eventLocation">Location</label>
+    <input id="eventLocation" type="text" required>
+
+    <button type="submit">Save Event</button>
+  </form>
+
+  <p id="formMessage" class="hidden"></p>
+</main>
+
+<script src="js/form.js"></script>
+
+<footer>
+  <p>&copy; 2026 EventHub</p>
+</footer>
+
+</body>
+</html>
